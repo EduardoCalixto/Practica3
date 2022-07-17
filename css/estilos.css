@@ -1,0 +1,98 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: arial,sans-serif;
+	font-size: 16px;
+	background: yellowgreen;
+}
+.contenedor{
+	width: 90%; /*anchura se maneja en porcentajes*/
+	margin: 20px auto;
+	overflow: hidden; /*para colocar elementos en linea*/
+}
+header{
+	background: #DE5CE6;
+}
+header nav{
+	width: 90%; /*anchura se maneja en porcentajes*/
+}
+header nav ul{
+	width: 100%; /*anchura se maneja en porcentajes*/
+	overflow: hidden;
+	list-style: none;
+}
+header nav ul li{
+	float: left;
+}
+header nav ul li a{
+	text-decoration: none;
+	display: inline-block;
+	padding: 15px 20px;
+	color: #5C6FE6;
+}
+header nav ul li a:hover{
+	background: #40E650;
+	color: orange;
+}
+.main{
+	width: 70%;/*anchura se maneja en porcentajes*/
+	background: yellow;
+	float: left;
+}
+.main .imagen img{
+	width: 100%;/*anchura se maneja en porcentajes*/
+	vertical-align: top;
+}
+.main .ref{
+	padding: 40px;
+}
+.main .ref article h2{
+	margin-bottom: 20px;
+	color: #60C8F0;
+}
+.main .ref article p{
+	margin-bottom: 15px;
+	line-height: 27px;
+	color: blue;
+}
+aside{
+	width: 30%;
+	padding: 25px;
+	color: #6F4BA6;
+	background: hotpink;
+	float: left;
+}
+aside .lateral{
+	margin-bottom: 20px;
+}
+aside .lateral .titulo{
+	color: aquamarine;
+	border-bottom: 1px solid pink;
+	margin-bottom: 10px;
+}
+aside .lateral ul{
+	list-style: none;
+}
+aside .lateral ul li{
+	border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+aside .lateral ul li a{
+	color: #9162D9;
+	text-decoration: none;
+}
+aside .lateral ul li a:hover{
+	color: skyblue;
+}
+aside .lateral p{
+	line-height: 27px;
+}
+footer{
+	width: 70%;
+	background: darkgreen;
+	color: tomato;
+	padding: 15px 0;
+	text-align: center;
+}
