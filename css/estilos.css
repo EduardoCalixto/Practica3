@@ -1,15 +1,18 @@
 *{
 	margin: 0;
 	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 body{
-	font-family: arial,sans-serif;
+	font-family: arial, sans-serif;
 	font-size: 16px;
 	background: yellowgreen;
 }
 .contenedor{
-	width: 90%; /*anchura se maneja en porcentajes*/
+	width: 90%; /*antes de 1000px*/
+	max-width: 1000px; /*esto se pone para que respete los margenes*/
 	margin: 20px auto;
 	overflow: hidden; /*para colocar elementos en linea*/
 }
@@ -17,7 +20,7 @@ header{
 	background: #DE5CE6;
 }
 header nav{
-	width: 90%; /*anchura se maneja en porcentajes*/
+	width: 100%; /*anchura se maneja en porcentajes*/
 }
 header nav ul{
 	width: 100%; /*anchura se maneja en porcentajes*/
@@ -38,61 +41,97 @@ header nav ul li a:hover{
 	color: orange;
 }
 .main{
-	width: 70%;/*anchura se maneja en porcentajes*/
+	width: 70%; /*antes 700px*/
 	background: yellow;
-	float: left;
+	float: left; /*para ubicarlos flotantes */
 }
 .main .imagen img{
-	width: 100%;/*anchura se maneja en porcentajes*/
+	width: 100%;
 	vertical-align: top;
 }
-.main .ref{
+.main .post{
 	padding: 40px;
 }
-.main .ref article h2{
+.main .post article h2{
 	margin-bottom: 20px;
 	color: #60C8F0;
 }
-.main .ref article p{
+.main .post article p{
 	margin-bottom: 15px;
 	line-height: 27px;
-	color: blue;
 }
 aside{
-	width: 30%;
-	padding: 25px;
+	width: 30%; /*anten de 300px*/
+	padding: 20px;
 	color: #6F4BA6;
+	/*float: left; /*para ubicarlos flotantes */
 	background: hotpink;
-	float: left;
 }
-aside .lateral{
+aside .widget{
 	margin-bottom: 20px;
 }
-aside .lateral .titulo{
+aside .widget .titulo{
 	color: aquamarine;
-	border-bottom: 1px solid pink;
+	border-bottom: 1px solidpink;
 	margin-bottom: 10px;
 }
-aside .lateral ul{
+aside .widget ul{
 	list-style: none;
 }
-aside .lateral ul li{
-	border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+aside .widget ul li{
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-aside .lateral ul li a{
+aside .widget ul li a{
 	color: #9162D9;
 	text-decoration: none;
 }
-aside .lateral ul li a:hover{
+aside .widget ul li a:hover{
 	color: skyblue;
 }
-aside .lateral p{
+aside .widget p{
 	line-height: 27px;
 }
 footer{
 	width: 70%;
+	/*overflow: hidden /*para colocar main y aside en linea*/
+	clear: both; /*se puede usar en lugar de overflow: hidden */;
 	background: darkgreen;
 	color: tomato;
 	padding: 15px 0;
 	text-align: center;
+}
+
+/*Uso de mediaqueries*/
+@media screen and (max-width: 800px){
+	.main{
+		width: 100%;
+		font-size: 12px;
+		background: red;
+	}
+	aside{
+		width: 100%;
+	}
+	footer{
+		width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 600px){
+	.main{
+		width: 100%;
+		font-size: 12px;
+		background: #D6A84B;
+	}
+	aside{
+		width: 100%;
+	}
+	footer{
+		width: 100%;
+	}
+}
+@media screen and (min-width: 800px){
+	body{
+		background: #5D8DF0;
+	}
 }
