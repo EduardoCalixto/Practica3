@@ -1,0 +1,135 @@
+<!--pagina para fuentes https://fonts.google.com/-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>registrarse</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Slabo+27px&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<style>
+		.caja{
+			background: #AA78EB;
+			font-family: 'Slabo 27px', serif;
+			font-size: 18px;
+			width:80%;
+			margin:40px;
+		}
+		.formulario .caja-inputs{
+			padding: 20px;
+			background: #61BBFA;
+			border-radius: 6px 6px 0 0;
+		}
+		.formulario input[type="text"], .formulario input[type="correo"]{
+			display: block;
+			width: 100%;
+			margin-bottom: 20px;
+			padding: 15px 10px;
+			border: none;
+			border-bottom: 5px solid #E96CEB;
+			font-family: 'Slabo 27px', serif;
+			font-size: 18px;
+		}
+		.formulario input[type="text"]:focus, .formulario input[type="correo"]:focus{
+			border-bottom: 5px solid lime;
+		}
+		.formulario input[type="radio"]{
+			display: none;
+		}
+		.formulario .sexo{
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			margin-bottom: 20px;
+		}
+		.formulario .sexo .hombre{
+			border-radius: 5px 0 0 5px;
+		}
+		.formulario .sexo .mujer{
+			border-radius: 5px 0 0 5px;
+		}
+		.formulario .label-radio{
+			background: rgba(249,160,63,.4);/*El .4 es una transparencia*/
+			color: #66FF33;
+			padding: 10px;
+			text-align: center;
+			width: 49%;
+		}
+
+		.formulario input[type="radio"]:checked + .label-radio{
+			background: red;
+		}
+		.formulario .terminos{
+			text-align: center;
+			color: yellow;
+		}
+		.formulario .terminos label{
+			margin-left: 10px;
+		}
+		.formulario .error{
+			display: none; /*Se encarga de ocultar la seccion de errores*/
+			margin-top: 20px;
+			border-radius: 3px;
+			background: #6600FF;
+			color: peachpuff;
+			padding: 15px 10px;
+			padding-left: 40px; 
+		}
+		.formulario .btn{
+			width: 100%;
+			text-align: center;
+			background: skyblue;
+			color: purple;
+			border: none;
+			display: block;
+			padding: 15px 10px;
+			cursor: pointer;
+			border-radius: 0 0 6px 6px;
+			font-family: 'Slabo 27px', serif;
+			font-size: 18px;
+		}
+		.formulario .btn:hover{
+			background: salmon;
+		}
+	</style>
+</head>
+
+<body>
+		
+	<div class="contenedor">
+		<header>
+		</header>
+		<section class="main">
+			
+			<div class="caja">
+				<form action="" class="formulario" id="formulario" name="formulario">
+					<div class="caja-inputs">
+						<input type="text" name="nombre" placeholder="Nombre">
+						<input type="text" name="correo" placeholder="Correo">
+						<div class="sexo">
+							<input type="radio" name="sexo" id="hombre" value="Hombre">
+							<label class="label-radio hombre" for="hombre">Hombre</label> 
+							<input type="radio" name="sexo" id="mujer" value="Mujer">
+							<label class="label-radio mujer" for="hombre">Mujer</label> 
+						</div>
+						<div class="terminos">
+							<input type="checkbox" name="terminos" id="terminos">
+							<label for="terminos">Acepto los terminos y condiciones</label> 
+						</div>
+						<ul class="error" id="error"></ul>
+					</div>
+					<input type="submit" class="btn" value="Registrarse">
+				</form>
+			</div>
+		</section>
+
+		<footer>
+			<p>Eduardo Calixto - Derechos reservados</p>
+		</footer>
+	</div>
+
+<script src="js/acciones1.js"></script>
+
+</body>
+</html>
+

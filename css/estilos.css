@@ -61,10 +61,10 @@ header nav ul li a:hover{
 	line-height: 27px;
 }
 aside{
-	width: 30%; /*anten de 300px*/
+	width: 30%; /*antes de 300px*/
 	padding: 20px;
 	color: #6F4BA6;
-	/*float: left; /*para ubicarlos flotantes */
+	float: left; /*para ubicarlos flotantes */
 	background: hotpink;
 }
 aside .widget{

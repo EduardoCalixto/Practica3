@@ -7,26 +7,32 @@
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<style >
 		.main .post{
+
+			width: 100%;
+
 			background-image: url("Imagenes/calculadora.png");
 			background-position-x:center;
 			background-position-y:center;
 			background-repeat: no-repeat;
 			background-size: 400px;
-			/*background-attachment: fixed;*/  
 		}
+		
 		form p{
 			text-align: center;
 			margin-bottom: 20px;
 			font-size: 30px;
 		}
+		
 		input[type="text"]{
-			width: 20%;
+			width: 100%;
 			margin-bottom: 20px;
 			padding: 20px;
 			text-align: center;
 		}
+
 		form .btn{
-			width: 15%;
+			width: 100%;
+			
 			background: lightsalmon;
 			color: palegreen;
 			border: none;
@@ -49,28 +55,29 @@
 				<ul>
 					<li><a href="index.html">Inicio</a></li>
 					<li><a href="calculadora.html">Calculadora</a></li>
-					<li><a href="#">Productos</a></li>
+					<li><a href="registrarse.html">Registrarse</a></li>
 					<li><a href="#">Contacto</a></li>
 				</ul>
 			</nav>
 		</header>
 		<section class="main">
-			<div class="imagen">
-				<h2>Calculadora</h2>
-				<p>El siguiente formulario realiza las acciones de una calculadora</p>
-			</div>
+			
 			<section class="post">
-				<article>
-					
-					<form action="">
-						<input type="text" id="numero1"><p>+</p>
+				
+					<form action="" >
+						<input type="text" id="numero1">
+						<br>
 						<p>+</p>
+						<br>
 						<input type="text" id="numero2">
+						<br>
 						<p>=</p>
+						<br>
 						<input type="text" id="resultado" readonly>
-						<input type="button" class="btn" value="resultado" >
+						<br>
+						<input type="button" onclick="suma()" class="btn" value="Obtener resultado" >
 					</form>
-				</article>
+				
 			</section>
 			
 		</section>
@@ -100,5 +107,9 @@
 			<p>Eduardo Calixto - Derechos reservados</p>
 		</footer>
 	</div>
+
+
+<script src="js/acciones.js"></script>
+
 </body>
 </html>
